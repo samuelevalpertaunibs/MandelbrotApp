@@ -5,6 +5,11 @@ public class Complex {
     double real;
     double imaginary;
 
+    public Complex() {
+        this.real = 0;
+        this.imaginary = 0;
+    }
+
     public Complex(double real, double imaginary) {
         this.real = real;
         this.imaginary = imaginary;
@@ -24,7 +29,7 @@ public class Complex {
         return new Complex(realResult, imaginaryResult);
     }
 
-    public double mod () {
+    public double moduleSquared () {
         return Math.pow(real, 2) + Math.pow(imaginary, 2);
     }
 }
