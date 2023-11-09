@@ -25,11 +25,11 @@ public class Complex {
 
     public Complex sqr () {
         double realResult = Math.pow(real, 2) - Math.pow(imaginary, 2);
-        double imaginaryResult = 2 * realResult * imaginary;
+        double imaginaryResult = 2 * real * imaginary;
         return new Complex(realResult, imaginaryResult);
     }
 
     public double moduleSquared () {
-        return Math.pow(real, 2) + Math.pow(imaginary, 2);
+        return Math.pow(real, 2) - Math.pow(imaginary, 2);
     }
 }

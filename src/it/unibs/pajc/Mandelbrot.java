@@ -1,7 +1,6 @@
 package it.unibs.pajc;
 
 public class Mandelbrot {
-    private static final double step = 0.05;
     private double [][] data;
 
     public double[][] getData() {
@@ -17,6 +16,8 @@ public class Mandelbrot {
         for (int i = 0; i < resolution; i++) {
             for (int j = 0; j < resolution; j++) {
                 data[i][j] = fMandelbrot(new Complex(min.real + j * dreal, max.imaginary - i * dimaginary));
+                System.out.println(data[i][j]
+                );
             }
         }
     }
@@ -24,13 +25,11 @@ public class Mandelbrot {
     private static double fMandelbrot(Complex c) {
         int maxIteration = 100;
         Complex z = new Complex();
-        double result = 0;
         for (int i = 0; i < maxIteration; i++) {
             z = z.sqr().sum(c);
             if (z.moduleSquared() > 1e5)
-                return (maxIteration - i) / maxIteration;
+                return ((double)maxIteration - i) / maxIteration;
         }
-
-        return 0;
+        return 0.;
     }
 }
