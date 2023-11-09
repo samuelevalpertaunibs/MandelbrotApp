@@ -58,6 +58,8 @@ public class PnlMandelbrot extends JPanel implements MouseListener {
         zoomIn(p, 1/zoom);
     }
 
+    //TODO implement viewport pan
+
     protected Point2D.Double getViewportPoint (Point pixel) {
         double x = viewport.getWidth() / getWidth() * pixel.x + viewport.getMinX();
         double y = -viewport.getHeight() / getHeight() * pixel.y + viewport.getMaxY();
@@ -77,7 +79,6 @@ public class PnlMandelbrot extends JPanel implements MouseListener {
             zoomOut(p, 1.1);
         else
             zoomIn(p, 1.1);
-
     }
 
     @Override
