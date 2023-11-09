@@ -16,8 +16,6 @@ public class Mandelbrot {
         for (int i = 0; i < resolution; i++) {
             for (int j = 0; j < resolution; j++) {
                 data[i][j] = fMandelbrot(new Complex(min.real + j * dreal, max.imaginary - i * dimaginary));
-                System.out.println(data[i][j]
-                );
             }
         }
     }

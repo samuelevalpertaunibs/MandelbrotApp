@@ -11,7 +11,7 @@ public class MandelbrotApp extends JFrame {
     public MandelbrotApp() {
         setTitle("Mandelbrot");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(300, 200);
+        setSize(600, 500);
         setLocationRelativeTo(null);
         add(MainPanel);
     }
